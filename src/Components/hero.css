@@ -1,0 +1,64 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+}
+
+/* Top Left - Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+/* Top Right - Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* Bottom Left - Slide Indicator Widget */
+.widget {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  z-index: 10;
+}
+
+.widget-line {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.5s ease;
+}
+
+.widget-line.active {
+  background-color: #ffffff;
+}
