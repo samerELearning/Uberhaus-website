@@ -1,0 +1,84 @@
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: white;
+}
+
+/* Header styles */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation links */
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+/* Image indicator (3 lines at bottom left) */
+.image-indicator {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.line {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+/* Active line with animation (acts like a loader) */
+.line.active {
+  background-color: white;
+  animation: loader 5s linear forwards;
+}
+
+@keyframes loader {
+  from {
+    width: 0%;
+    background-color: white;
+  }
+  to {
+    width: 40px;
+    background-color: white;
+  }
+}
+

@@ -1,9 +1,9 @@
+import Hero from './Hero';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Hero />
     </div>
   );
 }
