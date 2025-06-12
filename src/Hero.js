@@ -5,6 +5,7 @@ import image2 from "./Assets/Images/image2.jpg";
 import image3 from "./Assets/Images/image3.jpg";
 import image4 from "./Assets/Images/image4.PNG";
 import image5 from "./Assets/Images/image5.jpg";
+import logo from "./Assets/Images/logo.png";
 
 const images = [image1, image2, image3];
 
@@ -23,12 +24,12 @@ export default function Hero() {
         <div className="hero" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
             <div className="hero-overlay">
                 <header className="hero-header">
-                    <div className="logo">UBERHAUS</div>
-                        <nav className="nav">
-                            <a href="#services">Services</a>
-                            <a href="#clients">Clients</a>
-                            <a href="#about">About</a>
-                        </nav>
+                    <img src={logo} alt="Uberhaus Logo" className="logo" />
+                    <nav className="nav">
+                        <a href="#services">Services</a>
+                        <a href="#clients">Clients</a>
+                        <a href="#about">About</a>
+                    </nav>
                 </header>
                 <div className="image-indicator">
                     {images.map((_, i) => (
