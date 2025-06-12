@@ -21,26 +21,38 @@ export default function Hero() {
     }, []);
     
     return (
-        <div className="hero" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
-            <div className="hero-overlay">
-                <header className="hero-header">
-                    <img src={logo} alt="Uberhaus Logo" className="logo" />
-                    <nav className="nav">
-                        <a href="#services">Services</a>
-                        <a href="#clients">Clients</a>
-                        <a href="#about">About</a>
-                    </nav>
-                </header>
-                <div className="image-indicator">
-                    {images.map((_, i) => (
-                    <div
-                        key={i}
-                        className={`line ${i === currentIndex ? "active" : ""}`}
-                        style={{ animationDuration: currentIndex === i ? "5s" : "0s" }}>
-                    </div>
-          ))}
-                </div>
-            </div>    
-        </div>
+        <div className="hero-slider">
+  <div
+    className="slider-track"
+    style={{
+      transform: `translateX(-${currentIndex * 100}%)`,
+      transition: 'transform 0.5s ease-in-out',
+    }}
+  >
+    {images.map((img, i) => (
+      <img key={i} src={img} alt={`Slide ${i}`} className="slide-image" />
+    ))}
+  </div>
+  {/* Overlay stays on top */}
+  <div className="hero-overlay">
+    <header className="hero-header">
+      <img src={logo} alt="Uberhaus Logo" className="logo" />
+      <nav className="nav">
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+    <div className="image-indicator">
+      {images.map((_, i) => (
+        <div
+          key={i}
+          className={`line ${i === currentIndex ? "active" : ""}`}
+          style={{ animationDuration: currentIndex === i ? "5s" : "0s" }}
+        />
+      ))}
+    </div>
+  </div>
+</div>
     );
 }
