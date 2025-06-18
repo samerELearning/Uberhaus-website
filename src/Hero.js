@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import "./hero.css";
-import image1 from "./Assets/Images/image1.jpg";
-import image2 from "./Assets/Images/image2.jpg";
-import image3 from "./Assets/Images/image3.jpg";
-import image4 from "./Assets/Images/image4.PNG";
-import image5 from "./Assets/Images/image5.jpg";
-import logo from "./Assets/Images/logo.png";
+import './hero.css';
+import image1 from './Assets/Images/image1.jpg';
+import image2 from './Assets/Images/image2.jpg';
+import image3 from './Assets/Images/image3.jpg';
+import logo from './Assets/Images/logo.png';
 
 const images = [image1, image2, image3];
 
@@ -14,26 +12,27 @@ export default function Hero() {
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
 
+  // Slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setIsTransitioning(true);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
+  // Reset transition after final clone
   useEffect(() => {
-    // When we reach the cloned slide (index === images.length), reset instantly to 0
     if (currentIndex === images.length) {
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentIndex(0);
-      }, 500); // Match transition duration
+      }, 500); // match CSS transition time
     }
   }, [currentIndex]);
 
-  const allImages = [...images, images[0]]; // Clone first image at end
+  const allImages = [...images, images[0]]; // clone first image at end
+  const displayIndex = currentIndex % images.length;
 
   return (
     <div className="hero-slider">
@@ -50,7 +49,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Overlay */}
+      {/* Overlay for logo/nav/indicator */}
       <div className="hero-overlay">
         <header className="hero-header">
           <img src={logo} alt="Uberhaus Logo" className="logo" />
@@ -60,15 +59,13 @@ export default function Hero() {
             <a href="#about">About</a>
           </nav>
         </header>
+
         <div className="image-indicator">
           {images.map((_, i) => (
             <div
               key={i}
-              className={`line ${i === currentIndex % images.length ? 'active' : ''}`}
-              style={{
-                animationDuration:
-                  i === currentIndex % images.length ? '5s' : '0s',
-              }}
+              className={`line ${i === displayIndex ? 'active' : ''}`}
+              style={{ animationDuration: i === displayIndex ? '5s' : '0s' }}
             />
           ))}
         </div>
@@ -76,3 +73,4 @@ export default function Hero() {
     </div>
   );
 }
+

@@ -1,20 +1,16 @@
-/* New image slider container */
 .hero-slider {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Image track that slides */
 .slider-track {
   display: flex;
-  width: 100%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
 }
 
-/* Each image */
 .slide-image {
   width: 100%;
   height: 100%;
@@ -22,7 +18,6 @@
   flex-shrink: 0;
 }
 
-/* Overlay for logo, nav, and indicators */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -33,11 +28,11 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  padding: 20px 40px;
-  pointer-events: none; /* Allow clicks through overlay if needed */
+  padding: 2vh 4vw; /* scale with screen */
+  box-sizing: border-box;
+  pointer-events: none;
 }
 
-/* Header styles */
 .hero-header {
   display: flex;
   justify-content: space-between;
@@ -51,9 +46,8 @@
   padding: 10px;
 }
 
-/* Navigation links */
 .nav a {
-  margin-left: 20px;
+  margin-left: 1.5vw;
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -71,13 +65,16 @@
   background: white;
 }
 
-/* Image indicator (3 lines at bottom left) */
+/* Image indicator lines */
 .image-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
   display: flex;
   gap: 10px;
-  margin-left: 10px;
   align-items: center;
   pointer-events: auto;
+  z-index: 10;
 }
 
 .line {
@@ -103,3 +100,9 @@
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
