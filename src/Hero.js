@@ -61,13 +61,11 @@ export default function Hero() {
         </header>
 
         <div className="image-indicator">
-          {images.map((_, i) => (
-            <div
-              key={i}
-              className={`line ${i === displayIndex ? 'active' : ''}`}
-              style={{ animationDuration: i === displayIndex ? '5s' : '0s' }}
-            />
-          ))}
+            {images.map((_, i) => (
+                <div key={i} className="line-wrapper">
+                    <div className={`line-fill ${i === displayIndex ? 'active' : ''}`} />
+                </div>
+            ))}
         </div>
       </div>
     </div>
