@@ -1,0 +1,37 @@
+.services-section {
+  padding: 100px 60px;
+  background: white;
+}
+
+.services-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  width: fit-content;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 250px;
+  border-top: 1px solid #aaa;
+  padding-top: 30px;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #5a5a5a;
+  line-height: 1.6;
+}
