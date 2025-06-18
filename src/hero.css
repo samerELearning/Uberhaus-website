@@ -100,13 +100,6 @@
   }
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; /* Prevent scrollbars */
-}
-
 @media (max-width: 768px) {
   .nav {
     flex-wrap: wrap;
