@@ -94,6 +94,16 @@
   animation: fillLoader 5s linear forwards;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
 @keyframes fillLoader {
   from {
     width: 0%;
@@ -119,5 +129,6 @@
     left: 50%;
     transform: translateX(-50%);
     gap: 5px;
+    animation: fadeInUp 0.8s ease-out;
   }
 }
