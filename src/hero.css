@@ -106,3 +106,21 @@ html, body {
   height: 100%;
   overflow: hidden; /* Prevent scrollbars */
 }
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    margin: 5px;
+    font-size: 0.9rem;
+  }
+
+  .image-indicator {
+    bottom: 10px;
+    left: 10px;
+    gap: 5px;
+  }
+}
