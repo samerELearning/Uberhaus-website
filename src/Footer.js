@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="footer-section" style={{ backgroundImage: `url(${footerImage})` }}>
       <div className="footer-overlay">
-        <div className="footer-top">
+        <div className="footer-top-stacked">
             <div className="footer-brand">Uberhaus</div>
             <div className="footer-text">Your dream <br /> destination is waiting</div>
             <div className="footer-contact">
@@ -15,6 +15,7 @@ export default function Footer() {
                 <p>Instagram: uberhaus.realestate</p>
             </div>
         </div>
+
 
 
         <div className="footer-bottom">
