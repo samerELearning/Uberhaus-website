@@ -1,3 +1,4 @@
+import About from './About';
 import Hero from './Hero';
 import Listings from './Lisitings';
 import Services from './Services';
@@ -8,6 +9,7 @@ function App() {
       <Hero />
       <Services />
       <Listings />
+      <About />
     </div>
   );
 }
