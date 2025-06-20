@@ -40,3 +40,9 @@
   font-size: 14px;
   color: #666;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
