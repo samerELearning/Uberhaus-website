@@ -2,7 +2,7 @@ import About from './About';
 import Clients from './Clients';
 import Footer from './Footer';
 import Hero from './Hero';
-import Listings from './Lisitings';
+import Listings from './Listings';
 import Services from './Services';
 
 function App() {
