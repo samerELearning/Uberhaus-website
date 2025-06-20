@@ -4,10 +4,9 @@
 }
 
 .services-title {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 60px;
+  font-weight: 400;
   margin-bottom: 40px;
-  border-bottom: 1px solid #333;
   width: fit-content;
 }
 
@@ -26,12 +25,14 @@
 }
 
 .service-card h3 {
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 400;
   margin-bottom: 15px;
 }
 
 .service-card p {
-  font-size: 16px;
+  font-size: 20px;
   color: #5a5a5a;
   line-height: 1.6;
+  font-weight: 300;
 }

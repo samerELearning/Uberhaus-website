@@ -34,10 +34,10 @@
 }
 
 .footer-brand {
-  font-size: 48px;
+  font-size: 75px;
   font-weight: bold;
   flex: 1;
-  min-width: 200px;
+  font-stretch: expanded;
 }
 
 .footer-text {
