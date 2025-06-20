@@ -4,6 +4,7 @@ import img1 from './Assets/Images/image1.jpg';
 import img2 from './Assets/Images/image2.jpg';
 import img3 from './Assets/Images/image3.jpg';
 import img4 from './Assets/Images/image4.PNG';
+import img5 from './Assets/Images/image5.jpg';
 
 const listings = [
   {
@@ -25,6 +26,11 @@ const listings = [
     title: 'Glass Garden',
     desc: 'Beautiful luxury home with personalized services from Uberhaus.',
     image: img4,
+  },
+  {
+    title: 'Glass Garden',
+    desc: 'Beautiful luxury home with personalized services from Uberhaus.',
+    image: img5,
   },
 ];
 
