@@ -3,7 +3,7 @@ import './listings.css';
 import img1 from './Assets/Images/image1.jpg';
 import img2 from './Assets/Images/image2.jpg';
 import img3 from './Assets/Images/image3.jpg';
-import img4 from './Assets/Images/image4.jpg';
+import img4 from './Assets/Images/image4.PNG';
 
 const listings = [
   {
