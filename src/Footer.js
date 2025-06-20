@@ -22,7 +22,8 @@ export default function Footer() {
           <p>© Uberhaus, 2025</p>
           <div className="footer-links">
             <a href="#">Linkedin</a>
-            <a href="https://www.instagram.com/uberhaus.realestate/">Instagram</a>
+            <a href="https://www.instagram.com/uberhaus.realestate/" target="_blank" rel="noopener noreferrer"
+>Instagram</a>
           </div>
         </div>
       </div>
