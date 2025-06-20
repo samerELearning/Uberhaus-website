@@ -40,7 +40,11 @@ export default function Clients() {
         
         <div className="client-content">
             <div className={`slide-text ${fade ? 'slide-out' : 'slide-in'}`}>
-                <p className="testimonial-text">{testimonials[index].text}</p>
+                <p className="testimonial-text">
+                    <span className="quote-mark">“</span>
+                        {testimonials[index].text}
+                    <span className="quote-mark">”</span>
+                </p>
                 <p className="testimonial-author">{testimonials[index].author}</p>
             </div>
             

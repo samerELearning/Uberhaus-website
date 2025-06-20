@@ -26,6 +26,15 @@
   margin-bottom: 30px;
 }
 
+.quote-mark {
+  font-size: 60px;
+  font-family: Georgia, serif;
+  color: black;
+  vertical-align: top;
+  line-height: 0.6;
+  margin: 0 8px;
+}
+
 .testimonial-author {
   font-size: 16px;
   color: #555;
