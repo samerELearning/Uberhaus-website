@@ -6,15 +6,16 @@ export default function Footer() {
   return (
     <footer className="footer-section" style={{ backgroundImage: `url(${footerImage})` }}>
       <div className="footer-overlay">
-        <div className="footer-center">
-          <div className="footer-brand">Uberhaus</div>
-          <div className="footer-text">Your dream <br /> destination is waiting</div>
-          <div className="footer-contact">
-            <p>B1-114, Regus Office, Cubes Park, Abu Dhabi</p>
-            <p>Info@uberhaus.com</p>
-            <p>Instagram: uberhaus.realestate</p>
-          </div>
+        <div className="footer-top">
+            <div className="footer-brand">Uberhaus</div>
+            <div className="footer-text">Your dream <br /> destination is waiting</div>
+            <div className="footer-contact">
+                <p>B1-114, Regus Office, Cubes Park, Abu Dhabi</p>
+                <p>Info@uberhaus.com</p>
+                <p>Instagram: uberhaus.realestate</p>
+            </div>
         </div>
+
 
         <div className="footer-bottom">
           <p>© Uberhaus, 2025</p>
