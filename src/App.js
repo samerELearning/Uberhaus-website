@@ -1,5 +1,6 @@
 import About from './About';
 import Clients from './Clients';
+import Footer from './Footer';
 import Hero from './Hero';
 import Listings from './Lisitings';
 import Services from './Services';
@@ -12,6 +13,7 @@ function App() {
       <Listings />
       <About />
       <Clients />
+      <Footer />
     </div>
   );
 }
