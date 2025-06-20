@@ -18,28 +18,38 @@ const testimonials = [
 
 export default function Clients() {
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(false);
+    const [currentImage, setCurrentImage] = useState(testimonials[0].image);
+    const [nextIndex, setNextIndex] = useState(1);
+    const [fadeImage, setFadeImage] = useState(false);
 
-  useEffect(() => {
+    useEffect(() => {
     const timer = setInterval(() => {
-      setFade(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % testimonials.length);
-        setFade(false);
-      }, 400); // matches fade duration
+        setFadeImage(true);
+
+        setTimeout(() => {
+        setIndex(nextIndex);
+        setCurrentImage(testimonials[nextIndex].image);
+        setNextIndex((nextIndex + 1) % testimonials.length);
+        setFadeImage(false);
+        }, 500); // duration matches CSS transition
     }, 5000);
+
     return () => clearInterval(timer);
-  }, []);
+    }, [nextIndex]);
+
 
   return (
     <section id="clients" className="clients-section">
-        <div
-            className={`client-image fade-image ${fade ? 'fade-out' : 'fade-in'}`}
-            style={{ backgroundImage: `url(${testimonials[index].image})` }}
-        />
+        <div className="client-image-container">
+  <div
+    className={`client-image-layer ${fadeImage ? 'fade-out' : 'fade-in'}`}
+    style={{ backgroundImage: `url(${currentImage})` }}
+  />
+</div>
+
         
         <div className="client-content">
-            <div className={`slide-text ${fade ? 'slide-out' : 'slide-in'}`}>
+            <div className={`slide-text ${fadeImage ? 'slide-out' : 'slide-in'}`}>
                 <p className="testimonial-text">
                     <span className="quote-mark">“</span>
                         {testimonials[index].text}
