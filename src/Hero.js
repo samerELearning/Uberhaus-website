@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './hero.css';
 import image1 from './Assets/Images/image1.jpg';
-import image2 from './Assets/Images/image2.jpg';
+import image2 from './Assets/Images/image5.jpg';
 import image3 from './Assets/Images/image3.jpg';
 import logo from './Assets/Images/logo.png';
 
