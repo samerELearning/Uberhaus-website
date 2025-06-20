@@ -113,3 +113,34 @@
   }
 }
 
+@media (max-width: 768px) {
+  .clients-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .client-image-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .client-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .testimonial-author {
+    text-align: center;
+  }
+
+  .testimonial-indicator {
+    justify-content: center;
+  }
+}
+
+
