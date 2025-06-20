@@ -36,3 +36,21 @@
   line-height: 1.6;
   font-weight: 300;
 }
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+    .services-title {
+    text-align: center;
+    width: 100%;
+  }
+}
