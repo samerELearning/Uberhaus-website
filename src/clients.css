@@ -55,6 +55,30 @@
   animation: fillProgress 5s linear forwards;
 }
 
+/* Fade effect for image */
+.fade-image {
+  transition: opacity 0.4s ease;
+}
+.fade-out {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+
+/* Slide effect for text */
+.slide-text {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.slide-out {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @keyframes fillProgress {
   from {
     width: 0%;
