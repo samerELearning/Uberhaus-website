@@ -33,20 +33,26 @@ export default function Clients() {
 
   return (
     <section id="clients" className="clients-section">
-      <div className={`client-image fade-image ${fade ? 'fade-out' : 'fade-in'}`}
-        style={{ backgroundImage: `url(${testimonials[index].image})` }}
-      />
-      <div className={`client-content slide-text ${fade ? 'slide-out' : 'slide-in'}`}>
-        <p className="testimonial-text">{testimonials[index].text}</p>
-        <p className="testimonial-author">{testimonials[index].author}</p>
-        <div className="testimonial-indicator">
-          {testimonials.map((_, i) => (
-            <div key={i} className="indicator-bar">
-              <div className={`indicator-fill ${i === index ? 'active' : ''}`} />
+        <div
+            className={`client-image fade-image ${fade ? 'fade-out' : 'fade-in'}`}
+            style={{ backgroundImage: `url(${testimonials[index].image})` }}
+        />
+        
+        <div className="client-content">
+            <div className={`slide-text ${fade ? 'slide-out' : 'slide-in'}`}>
+                <p className="testimonial-text">{testimonials[index].text}</p>
+                <p className="testimonial-author">{testimonials[index].author}</p>
             </div>
-          ))}
+            
+            {/* Fixed position outside the animated text */}
+            <div className="testimonial-indicator">
+                {testimonials.map((_, i) => (
+                    <div key={i} className="indicator-bar">
+                        <div className={`indicator-fill ${i === index ? 'active' : ''}`} />
+                    </div>
+                ))}
+            </div>
         </div>
-      </div>
     </section>
   );
 }
