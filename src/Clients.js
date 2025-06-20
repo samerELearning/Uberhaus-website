@@ -1,5 +1,5 @@
 import React from 'react';
-/*import './clients.css';*/
+import './clients.css';
 
 export default function Clients() {
   const clientNames = ['ALDAR', 'Mubadala', 'Emaar', 'ADCB', 'FAB', 'Masdar'];

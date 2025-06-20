@@ -1,0 +1,29 @@
+.clients-section {
+  padding: 80px 60px;
+  background-color: white;
+  text-align: center;
+}
+
+.clients-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+}
+
+.clients-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.client-card {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 120px;
+}

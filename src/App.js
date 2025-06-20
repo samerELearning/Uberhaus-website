@@ -1,4 +1,5 @@
 import About from './About';
+import Clients from './Clients';
 import Hero from './Hero';
 import Listings from './Lisitings';
 import Services from './Services';
@@ -10,6 +11,7 @@ function App() {
       <Services />
       <Listings />
       <About />
+      <Clients />
     </div>
   );
 }
