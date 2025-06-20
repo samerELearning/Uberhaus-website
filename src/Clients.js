@@ -18,18 +18,25 @@ const testimonials = [
 
 export default function Clients() {
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
+      setFade(true);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % testimonials.length);
+        setFade(false);
+      }, 400); // matches fade duration
     }, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section id="clients" className="clients-section">
-      <div className="client-image" style={{ backgroundImage: `url(${testimonials[index].image})` }} />
-      <div className="client-content">
+      <div className={`client-image fade-image ${fade ? 'fade-out' : 'fade-in'}`}
+        style={{ backgroundImage: `url(${testimonials[index].image})` }}
+      />
+      <div className={`client-content slide-text ${fade ? 'slide-out' : 'slide-in'}`}>
         <p className="testimonial-text">{testimonials[index].text}</p>
         <p className="testimonial-author">{testimonials[index].author}</p>
         <div className="testimonial-indicator">
@@ -43,4 +50,5 @@ export default function Clients() {
     </section>
   );
 }
+
 
