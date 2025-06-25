@@ -17,5 +17,5 @@ This is a simple React web application for the Uberhaus real estate agency. The 
 ## Build and Test
 
 - `npm run build` – creates an optimized production build under the `build` directory.
-- `npm test` – runs the Jest test suite. No tests are currently included but the command is provided for future use.
+- `npm test` – runs the Jest test suite using React Testing Library. The command starts Jest in watch mode; press `a` to run all tests or run `npm test -- --watchAll=false` to execute the suite once.
 
