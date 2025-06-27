@@ -1,6 +1,6 @@
 # Uberhaus Real Estate Website
 
-This is a simple React web application for the Uberhaus real estate agency. The site showcases available listings, services, and client testimonials.
+This is a simple React web application for the Uberhaus real estate agency in Abudhabi, UAE. The site showcases available listings, services, and client testimonials.
 
 ## Setup
 
