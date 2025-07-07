@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './listings.css';
 import img1 from './Assets/Images/image1.jpg';
 import img2 from './Assets/Images/image2.jpg';
 import img3 from './Assets/Images/image3.jpg';
 import img4 from './Assets/Images/image4.PNG';
 import img5 from './Assets/Images/image5.jpg';
+
 
 const listings = [
   {
@@ -34,10 +35,34 @@ const listings = [
   },
 ];
 
+
 export default function Listings() {
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+  const carousel = carouselRef.current;
+  if (!carousel) return;
+
+  const onWheel = (e) => {
+    console.log('SCROLL EVENT', e.deltaY);
+    if (e.deltaY === 0) return;
+    e.preventDefault();
+    carousel.scrollBy({
+      left: e.deltaY * 1,
+      behavior: 'smooth',
+    });
+  };
+
+  carousel.addEventListener('wheel', onWheel, { passive: false });
+  return () => carousel.removeEventListener('wheel', onWheel);
+}, []);
+
+
+
   return (
     <section className="listings-section" id="listings">
-      <div className="carousel">
+      <div className="carousel" ref={carouselRef}>
+        
         {listings.map((item, i) => (
           <div key={i} className="card">
             <img src={item.image} alt={item.title} />
@@ -46,6 +71,7 @@ export default function Listings() {
           </div>
         ))}
       </div>
+      
     </section>
   );
 }
