@@ -16,8 +16,6 @@ export default function Footer() {
             </div>
         </div>
 
-
-
         <div className="footer-bottom">
           <p>© Uberhaus, {new Date().getFullYear()}</p>
           <div className="footer-links">

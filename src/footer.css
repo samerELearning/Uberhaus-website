@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   color: white;
-  height: 50vh;
+  height: fit-content;
   position: relative;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px;
+  padding: 20px 60px;
   box-sizing: border-box;
 }
 
