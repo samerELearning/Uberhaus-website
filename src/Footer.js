@@ -11,7 +11,8 @@ export default function Footer() {
             <div className="footer-text">Your dream <br /> destination is waiting</div>
             <div className="footer-contact">
                 <p>B1-114, Regus Office, Cubes Park, Abu Dhabi</p>
-                <p>Info@uberhaus.com</p>
+                <p>Email: <a href="mailto:info@uberhaus.com">info@uberhaus.com</a></p>
+                <p>Phone: <a href="tel:+971504844169">+971 50 484 4169</a></p>
                 <p>Instagram: uberhaus.realestate</p>
             </div>
         </div>

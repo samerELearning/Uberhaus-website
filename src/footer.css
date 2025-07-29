@@ -74,6 +74,16 @@
   text-decoration: underline;
 }
 
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 768px) {
   .footer-top-stacked {
     align-items: center;
