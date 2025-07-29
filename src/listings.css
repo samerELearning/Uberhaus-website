@@ -51,15 +51,26 @@
 }
 
 @media (max-width: 768px) {
+  .listings-section {
+    padding: 40px 10px;
+  }
+
   .carousel {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 16px;
   }
 
   .card {
-    width: 100%;        /* Take full available width */
-    max-width: 100%;    /* Remove limit */
-    margin: 0;          /* Remove auto centering gap */
+    width: 95vw;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 60vh;
   }
 }
+
 
