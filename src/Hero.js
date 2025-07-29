@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './hero.css';
-import image1 from './Assets/Images/image1.jpg';
-import image2 from './Assets/Images/image5.jpg';
-import image3 from './Assets/Images/image3.jpg';
+import image1 from './Assets/Images/image1.webp';
+import image2 from './Assets/Images/image5.webp';
+import image3 from './Assets/Images/image3.webp';
 import logo from './Assets/Images/logo.png';
 
 
@@ -45,18 +45,18 @@ export default function Hero() {
         }}
       >
         {allImages.map((img, i) => (
-          <img key={i} src={img} alt={`Slide ${i}`} className="slide-image" />
+          <img key={i} src={img} alt={`Slide ${i}`} className="slide-image" loading="lazy" />
         ))}
       </div>
 
       <div className="hero-overlay">
         <header className="hero-header">
-          <img src={logo} alt="Uberhaus Logo" className="logo" />
+          <img src={logo} alt="Uberhaus Logo" className="logo" loading="lazy" />
 
           <nav className="nav desktop-nav">
             <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
             <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
           </nav>
 
           <button
@@ -70,8 +70,8 @@ export default function Hero() {
         {menuOpen && (
           <div className="mobile-nav">
             <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="#clients" onClick={() => setMenuOpen(false)}>Clients</a>
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           </div>
         )}
 

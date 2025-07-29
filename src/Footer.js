@@ -4,7 +4,7 @@ import footerImage from './Assets/Images/image2.jpg';
 
 export default function Footer() {
   return (
-    <footer className="footer-section" style={{ backgroundImage: `url(${footerImage})` }}>
+    <footer id="contact" className="footer-section" style={{ backgroundImage: `url(${footerImage})` }}>
       <div className="footer-overlay">
         <div className="footer-top-stacked">
             <div className="footer-brand">Uberhaus</div>

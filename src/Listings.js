@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import './listings.css';
-import img1 from './Assets/Images/image1.jpg';
-import img2 from './Assets/Images/image2.jpg';
-import img3 from './Assets/Images/image3.jpg';
-import img4 from './Assets/Images/image4.PNG';
-import img5 from './Assets/Images/image5.jpg';
+import img1 from './Assets/Images/image1.webp';
+import img2 from './Assets/Images/image2.webp';
+import img3 from './Assets/Images/image3.webp';
+import img4 from './Assets/Images/image4.webp';
+import img5 from './Assets/Images/image5.webp';
 
 
 const listings = [
