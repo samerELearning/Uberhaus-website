@@ -66,8 +66,11 @@ export default function Listings() {
         {listings.map((item, i) => (
           <div key={i} className="card">
             <img src={item.image} alt={item.title} />
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
           </div>
         ))}
+
       </div>
       
     </section>

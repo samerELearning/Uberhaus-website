@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './clients.css';
-import img1 from './Assets/Images/image3.jpg';
-import img2 from './Assets/Images/image4.PNG';
+import img1 from './Assets/Images/image3.webp';
+import img2 from './Assets/Images/image4.webp';
 
 const testimonials = [
   {

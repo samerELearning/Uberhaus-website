@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import footerImage from './Assets/Images/image2.jpg';
+import footerImage from './Assets/Images/image2.webp';
 
 export default function Footer() {
   return (
